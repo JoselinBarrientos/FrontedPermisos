@@ -13,7 +13,8 @@
             <nav class="navbar-nav container d-flex flex-lg-row justify-content-md-between text-center">
                 <a routerLink="/" class="text-white text-decoration-none p-2">Inicio</a>
                 <a [routerLink]="['/about']" routerLinkActive="router-link-active" class="text-white text-decoration-none p-2" href="#">Nosotros</a>
-                <a [routerLink]="['/formulario']" routerLinkActive="router-link-active" class="text-white text-decoration-none p-2" href="#">Permisos</a>
+                <a *ngIf="isLoggedIn()" [routerLink]="['/formulario']" routerLinkActive="router-link-active" class="text-white text-decoration-none p-2" href="#">Permisos</a>
+                <a *ngIf="isLoggedIn()" [routerLink]="['/coordinacion']" routerLinkActive="router-link-active" class="text-white text-decoration-none p-2" href="#">Coordinacion</a>
                 <!-- <a [routerLink]="['/loginAdmin']" routerLinkActive="router-link-active" class="text-white text-decoration-none p-2" >Administrar</a> -->
                 <a [routerLink]="['/login']" routerLinkActive="router-link-active" class="text-white text-decoration-none p-2" href="#">Login</a>
               </nav>
