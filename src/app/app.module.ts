@@ -19,6 +19,7 @@ import { CoordinacionComponent } from './components/coordinacion/coordinacion.co
 import { LoginAdminComponent } from './components/login-admin/login-admin.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { PersonasComponent } from './components/personas/personas.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     NavbarComponent,
     FormularioComponent,
     CoordinacionComponent,
-    LoginAdminComponent
+    LoginAdminComponent,
+    PersonasComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,8 @@ import { LoginComponent } from './components/login/login.component';
 import { CoordinacionComponent } from './components/coordinacion/coordinacion.component';
 import { LoginAdminComponent } from './components/login-admin/login-admin.component';
 
+import { PersonasComponent } from './components/personas/personas.component';
+
 import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
@@ -20,6 +22,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'coordinacion', component: CoordinacionComponent, canActivate: [AuthGuard] },
   { path: 'loginAdmin', component: LoginAdminComponent, canActivate: [AuthGuard]},
+  {path: 'personas', component: PersonasComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({

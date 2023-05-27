@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,18 +9,20 @@ export class ApisService {
 
   constructor(private http: HttpClient) { }
 
-  public get(url:string) {
-    return this.http.get(url); //GET
-
+  get(url: string): Observable<any> {
+    return this.http.get(url);
   }
 
-  public post(url: string, body: any) {
-    return this.http.post(url, body); //Post
+  post(url: string, data: any): Observable<any> {
+    return this.http.post(url, data);
   }
 
-  public put(url: string, body: any) {
-    return this.http.put(url, body); //Put
+  put(url: string, data: any): Observable<any> {
+    return this.http.put(url, data);
+  }
+
+  delete(url: string): Observable<any> {
+    return this.http.delete(url);
   }
 }
-
 
